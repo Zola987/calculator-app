@@ -1,0 +1,24 @@
+{
+    "name": "new",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+        "prettier": "^2.4.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Zola987/calculator-app.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Zola987/calculator-app/issues"
+    },
+    "homepage": "https://github.com/Zola987/calculator-app#readme",
+    "dependencies": {
+        "node-sass": "^6.0.1"
+    }
+}
