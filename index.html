@@ -12,5 +12,55 @@
         <link rel="stylesheet" href="dist/css/main.css" />
         <title>Insert Title Here</title>
     </head>
-    <body></body>
+    <body>
+        <section class="calculator">
+          <section class="header">
+            <h1 class="title">calc</h1>
+              <div class="themes">
+                <p>THEME</p>
+                <section class="theme-toggle">
+                  <div class="theme-numbers">
+                    <div id="color-theme1" class="theme-number">1</div>
+                    <div id="color-theme2" class="theme-number">2</div>
+                    <div id="color-theme3"class="theme-number">3</div>
+                  </div>
+                <section class="toggle-window">
+                  <button aria-label="default theme" id="default" class="theme" ></button>
+                  <button aria-label="light theme"id="light" class="theme" ></button>
+                  <button aria-label="dark theme" id="dark" class="theme" ></button>
+                </section>
+              </section>
+            </div>
+          </section>
+          <div class="output">
+            <div data-previous-operand class="previous-operand"></div>
+            <div data-current-operand class="current-operand"></div>
+          </div>
+          <div class="keypad">
+              <button data-number class="key" >7</button>
+              <button data-number class="key" >8</button>
+              <button data-number class="key" >9</button>
+              <button data-delete id = "del" >DEL</button>
+              <button data-number class="key" >4</button>
+              <button data-number class="key" >5</button>
+              <button data-number class="key">6</button>
+              <button data-operation class="operator" >+</button>
+              <button data-number class="key" >1</button>
+              <button data-number class="key" >2</button>
+              <button data-number class="key" >3</button>
+              <button data-operation class="operator" >-</button>
+              <button data-number class="key">.</button>
+              <button data-number class="key" >0</button>
+              <button data-operation class="operator">/</button>
+              <button data-operation class="operator">x</button>
+              <button data-all-clear id="reset-key" >RESET</button>
+              <button data-output id="equals-key" >=</button>
+            </div>
+      
+          </div>
+      
+          <script src="js/app.js"></script>
+          <script src="js/themes.js"></script>
+        </main>
+      </body>
 </html>
