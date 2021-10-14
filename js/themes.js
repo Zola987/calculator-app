@@ -1,4 +1,6 @@
 const themes = document.getElementsByClassName('theme');
+const def = document.getElementById('default');
+
 for (let i = 0; i < themes.length; i++) {
     themes[i].addEventListener('click', changeTheme);
 }

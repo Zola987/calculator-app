@@ -8,9 +8,12 @@ html[data-theme='default'] {
   --accent-key-shadow: hsl(224, 28%, 35%);
   --equals-key: hsl(6, 63%, 50%);
   --equals-key-shadow: hsl(6, 70%, 34%);
+  --equals-key-hover: #f96b5b;
+  --reset-key-hover: #a2b2e1;
   --equals-text: white;
   --key: hsl(30, 25%, 89%);
   --key-shadow: hsl(28, 16%, 65%);
+  --key-hover: #fffffe;
   --text: hsl(221, 14%, 31%);
   --attr-text: white;
   --header-text: white;
@@ -25,8 +28,11 @@ html[data-theme='light'] {
   --accent-key-shadow: hsl(185, 58%, 25%);
   --equals-key: hsl(25, 98%, 40%);
   --equals-key-shadow: hsl(25, 99%, 27%);
+  --equals-key-hover: #ff8a38;
+  --reset-key-hover: #62b5bc;
   --key: hsl(45, 7%, 89%);
   --key-shadow: hsl(35, 11%, 61%);
+  --key-hover: #ffffff;
   --text: hsl(60, 10%, 19%);
   --attr-text: hsl(60, 10%, 19%);
   --header-text: hsl(60, 10%, 19%); }
@@ -40,8 +46,11 @@ html[data-theme='dark'] {
   --equals-key: hsl(176, 100%, 44%);
   --equals-key-shadow: hsl(177, 92%, 70%);
   --equals-text: hsl(198, 20%, 13%);
+  --equals-key-hover: #93fff8;
+  --reset-key-hover: #8631af;
   --key: hsl(268, 47%, 21%);
   --key-shadow: hsl(290, 70%, 36%);
+  --key-hover: #6c34ac;
   --text: hsl(52, 100%, 62%);
   --attr-text: hsl(52, 100%, 62%);
   --header-text: hsl(52, 100%, 62%); }
@@ -68,6 +77,7 @@ body {
   @media only screen and (min-width: 600px) {
     .calculator {
       max-width: 540px;
+      max-height: 708px;
       margin: 96px auto auto; } }
   .calculator .header {
     max-width: 327px;
@@ -110,7 +120,6 @@ body {
       overflow: hidden;
       width: 100%; }
       .calculator .header .toggle-window .theme {
-        background-color: var(--equals-key);
         border: none;
         border-radius: 50%;
         display: block;
@@ -118,11 +127,11 @@ body {
         width: 1rem;
         margin: 5px; }
         .calculator .header .toggle-window .theme #default {
-          background-color: var(--equals-key); }
+          color: var(--equals-key); }
         .calculator .header .toggle-window .theme #light {
-          background-color: inherit; }
+          color: var(--equals-key); }
         .calculator .header .toggle-window .theme #dark {
-          background-color: inherit; }
+          color: var(--equals-key); }
   .calculator .output {
     background-color: var(--bg-screen);
     border-radius: var(--bor-rad);
@@ -162,6 +171,7 @@ body {
     @media only screen and (min-width: 600px) {
       .calculator .keypad {
         max-width: 540px;
+        max-height: 480px;
         grid-gap: 24px; } }
     .calculator .keypad .operator {
       background-color: var(--key);
@@ -177,7 +187,8 @@ body {
       .calculator .keypad .operator:hover {
         cursor: pointer;
         box-shadow: none;
-        transform: translateY(3.5px); }
+        transform: translateY(3.5px);
+        background: var(--key-hover); }
     .calculator .keypad .key {
       border-radius: var(--bor-rad);
       min-width: 60px;
@@ -190,7 +201,7 @@ body {
         transform: translateY(3.5px); }
       .calculator .keypad .key:hover {
         cursor: pointer;
-        background: var(--key-shadow);
+        background: var(--key-hover);
         box-shadow: none;
         transform: translateY(3.5px); }
     .calculator .keypad #del {
@@ -205,7 +216,7 @@ body {
         box-shadow: none; }
       .calculator .keypad #del:hover {
         cursor: pointer;
-        background: var(--key-shadow);
+        background: var(--reset-key-hover);
         box-shadow: none; }
     .calculator .keypad #reset-key {
       border-radius: var(--bor-rad);
@@ -220,7 +231,7 @@ body {
       .calculator .keypad #reset-key:hover {
         cursor: pointer;
         box-shadow: none;
-        background: var(--key-shadow); }
+        background: var(--reset-key-hover); }
     .calculator .keypad #equals-key {
       border-radius: var(--bor-rad);
       background-color: var(--equals-key);
@@ -234,4 +245,4 @@ body {
       .calculator .keypad #equals-key:hover {
         cursor: pointer;
         box-shadow: none;
-        background: var(--equals-key-shadow); }
+        background: var(--equals-key-hover); }

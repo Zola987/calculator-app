@@ -11,9 +11,12 @@ html[data-theme='default'] {
     --accent-key-shadow: hsl(224, 28%, 35%);
     --equals-key: hsl(6, 63%, 50%);
     --equals-key-shadow: hsl(6, 70%, 34%);
+    --equals-key-hover: #f96b5b;
+    --reset-key-hover: #a2b2e1;
     --equals-text: white;
     --key: hsl(30, 25%, 89%);
     --key-shadow: hsl(28, 16%, 65%);
+    --key-hover: #fffffe;
     --text: hsl(221, 14%, 31%);
     --attr-text: white;
     --header-text: white;
@@ -29,8 +32,11 @@ html[data-theme='light'] {
     --accent-key-shadow: hsl(185, 58%, 25%);
     --equals-key: hsl(25, 98%, 40%);
     --equals-key-shadow: hsl(25, 99%, 27%);
+    --equals-key-hover: #ff8a38;
+    --reset-key-hover: #62b5bc;
     --key: hsl(45, 7%, 89%);
     --key-shadow: hsl(35, 11%, 61%);
+    --key-hover: #ffffff;
     --text: hsl(60, 10%, 19%);
     --attr-text: hsl(60, 10%, 19%);
     --header-text: hsl(60, 10%, 19%);
@@ -46,8 +52,11 @@ html[data-theme='dark'] {
     --equals-key: hsl(176, 100%, 44%);
     --equals-key-shadow: hsl(177, 92%, 70%);
     --equals-text: hsl(198, 20%, 13%);
+    --equals-key-hover: #93fff8;
+    --reset-key-hover: #8631af;
     --key: hsl(268, 47%, 21%);
     --key-shadow: hsl(290, 70%, 36%);
+    --key-hover: #6c34ac;
     --text: hsl(52, 100%, 62%);
     --attr-text: hsl(52, 100%, 62%);
     --header-text: hsl(52, 100%, 62%);
@@ -78,6 +87,7 @@ body {
 
     @media only screen and (min-width: 600px) {
         max-width: 540px;
+        max-height: 708px;
         margin: 96px auto auto;
     }
 
@@ -135,7 +145,6 @@ body {
             width: 100%;
 
             .theme {
-                background-color: var(--equals-key);
                 border: none;
                 border-radius: 50%;
                 display: block;
@@ -144,15 +153,15 @@ body {
                 margin: 5px;
 
                 #default {
-                    background-color: var(--equals-key);
+                    color: var(--equals-key);
                 }
 
                 #light {
-                    background-color: inherit;
+                    color: var(--equals-key);
                 }
 
                 #dark {
-                    background-color: inherit;
+                    color: var(--equals-key);
                 }
             }
         }
@@ -209,6 +218,7 @@ body {
 
         @media only screen and (min-width: 600px) {
             max-width: 540px;
+            max-height: 480px;
             grid-gap: 24px;
         }
 
@@ -230,6 +240,7 @@ body {
                 cursor: pointer;
                 box-shadow: none;
                 transform: translateY(3.5px);
+                background: var(--key-hover);
             }
         }
         .key {
@@ -247,7 +258,7 @@ body {
 
             &:hover {
                 cursor: pointer;
-                background: var(--key-shadow);
+                background: var(--key-hover);
                 box-shadow: none;
                 transform: translateY(3.5px);
             }
@@ -268,7 +279,7 @@ body {
 
             &:hover {
                 cursor: pointer;
-                background: var(--key-shadow);
+                background: var(--reset-key-hover);
                 box-shadow: none;
             }
         }
@@ -289,7 +300,7 @@ body {
             &:hover {
                 cursor: pointer;
                 box-shadow: none;
-                background: var(--key-shadow);
+                background: var(--reset-key-hover);
             }
         }
 
@@ -309,7 +320,7 @@ body {
             &:hover {
                 cursor: pointer;
                 box-shadow: none;
-                background: var(--equals-key-shadow);
+                background: var(--equals-key-hover);
             }
         }
     }
