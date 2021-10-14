@@ -120,6 +120,7 @@ body {
       overflow: hidden;
       width: 100%; }
       .calculator .header .toggle-window .theme {
+        background-color: var(--equals-key);
         border: none;
         border-radius: 50%;
         display: block;

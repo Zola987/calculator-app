@@ -136,6 +136,8 @@ body {
                 }
             }
         }
+
+        //Theme toggle
         .toggle-window {
             background-color: var(--bg-keypad);
             border-radius: 16px;
@@ -145,6 +147,7 @@ body {
             width: 100%;
 
             .theme {
+                background-color: var(--equals-key);
                 border: none;
                 border-radius: 50%;
                 display: block;
