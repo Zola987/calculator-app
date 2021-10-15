@@ -17,3 +17,7 @@ function changeTheme(ev) {
     let dot = document.getElementById(colorTheme);
     dot.style.setProperty('background-color', 'var(--equals-key');
 }
+
+window.addEventListener('load', function () {
+    document.getElementById('default').click();
+});
